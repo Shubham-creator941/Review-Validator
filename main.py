@@ -120,23 +120,7 @@ app = builder.compile()
 # ==========================================
 # 4. RUNNING THE SYSTEM (TESTING)
 # ==========================================
-# if __name__ == "__main__":
-#     print("--- TESTING FAKE REVIEW SCENARIO ---")
-#     fake_review_data = {
-#         "review_text": "Terrible headphones. Sound quality is bad.",
-#         "star_rating": 1,
-#         "user_id": "user_12345_new",
-#         "account_age_days": 0,
-#         "purchase_found": False
-#     }
-    
-#     result = app.invoke(fake_review_data)
-    
-#     print(f"Credibility Agent: {result['credibility_result']}")
-#     print(f"Content Agent: {result['content_result']}")
-#     print(f"Purchase Agent: {result['purchase_result']}")
-#     print(f"\nFINAL DECISION: {result['final_decision']} (Confidence: {result['confidence_score']}%)")
-#     print("-" * 40)
+
 if __name__ == "__main__":
     print("--- TESTING GENUINE REVIEW SCENARIO ---")
     genuine_review_data = {

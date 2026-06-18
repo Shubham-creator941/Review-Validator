@@ -7,7 +7,7 @@ Built as a technical implementation for Aguken AI.
 ## Architecture
 This system utilizes **LangGraph** to execute three specialized Large Language Model (LLM) agents in parallel, significantly reducing verification time compared to sequential processing. A final Aggregator node compiles the parallel outputs to make a definitive decision.
 
-### Simple Data Flow
+## Simple Data Flow
 ```text
 Customer posts review
     ↓
@@ -19,21 +19,21 @@ Customer posts review
 │  Content Agent:      ✓ AUTHENTIC        │
 │  Purchase Agent:     ✓ VERIFIED         │
 │                                         │
-│  Combined Decision:  ✅ APPROVE (94%)    │
+│  Combined Decision:  ✅ APPROVE (94%)   │
 │                                         │
 └─────────────────────────────────────────┘
     ↓
 Review displayed or Blocked
 ```
 
-### Tech Stack
+## Tech Stack
 
 • Framework: LangGraph, LangChain
 • LLM: Groq (Llama 3.1 8B Instant) for ultra-fast, low-latency reasoning
 • Language: Python 3
 
 
-### Specialized Agents
+## Specialized Agents
 
 1. Credibility Agent: Evaluates account age and historical trustworthiness.
 2. Content Agent: Analyzes the review text for specific, genuine details versus generic spam patterns.
@@ -41,7 +41,7 @@ Review displayed or Blocked
 4. Master Aggregator: Synthesizes the parallel findings into a final APPROVE or BLOCK verdict with a confidence score.
 
 
-### Local Setup & Execution
+## Local Setup & Execution
 1. Clone this repository.
 2. Install the required dependencies:
     pip3 install langgraph langchain langchain-groq python-dotenv
